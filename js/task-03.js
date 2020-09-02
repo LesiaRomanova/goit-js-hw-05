@@ -14,12 +14,12 @@ class Storage {
     return this.items;
   }
   addItem(item) {
-    return items.push(item);
+    this.items.push(item);
   }
   removeItem(item) {
-    let index = this.items.indexOf(item);
-    if (index > -1);
-    return this.items.splice(index, 1);
+    if (this.items.includes(item)) {
+      this.items.splice(this.items.indexOf(item), 1);
+    }
   }
 }
 
